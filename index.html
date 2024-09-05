@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sound Button Example</title>
+</head>
+<body>
+  <h1>Click the Button to Play a Sound</h1>
+  <button onclick="playSound()">Click Me</button>
+  <audio id="buttonSound" src="newfile.mp3"></audio>
+  <script>
+    function playSound() {
+      var sound = document.getElementById('buttonSound');
+      sound.play().catch(error => console.error("Error playing sound:", error));
+    }
+  </script>
+</body>
+</html>
